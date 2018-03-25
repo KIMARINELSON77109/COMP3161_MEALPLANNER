@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ultimate Meal Planner</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Just do it!</span>
+      <span class="site-heading-lower">Ultimate Meal Planner</span>
+    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="login.html">Login</a>
+            </li>
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="register.html">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-lower">Registration</span>
+              </h2>
+              <form name ="reg_form" id= "reg__form" method="post">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                           <div class="modal-body">
+                               <div class="form-group">
+                                   <input type="text" name= "fname" id= "firstname" class="form-control input-lg" placeholder="Firstname"/>
+                                   <span class="error" id="fname_error"></span>
+                               </div>
+                               
+                               <div class="form-group">
+                                   <input type="text" name= "lname" id= "lastname" class="form-control input-lg" placeholder="Lastname"/>
+                                   <span class="error" id="lname_error"></span>
+                               </div>
+                               
+                               <div class="form-group">
+                                   <input type="text" name= "DOB" id= "DOB" class="form-control input-lg" placeholder="Date of Birth"/>
+                                   <span class="error" id="DOB_error"></span>
+                               </div>
+                               
+                               <div class="form-group">
+                                     <select name="diet_type" class="form-control input-lg">
+                                        <option value="Classic">Classic--No hold barred</option>
+                                        <option value="Vegetarian">Vegetarian--Zero meat</option>
+                                        <option value="Vegan">Vegan--No animal products</option>
+                                        <option value="Diabetic">Diabetic--Easy on the sugar</option>
+                                        <option value="Low Carb">Low Carb--Easy on the carbs</option>
+                                      </select>
+                                   <span class="error" id="diet_error"></span>
+                               </div>
+                               <div>
+                                 <p>Allergies:</p>
+                                 <div style="padding-bottom: 20px;">
+                                     <div style="float: left;padding-bottom: 20px;">
+                                        <input id="gluten" type="checkbox" name="ingredients[]" value="gluten"/> Gluten-Free
+                                     </div>
+                                       
+                                     <div style="width: 7em; float: left;">
+                                        <input id="dairy" type="checkbox" name="ingredients[]" value="Mushrooms"/> Dairy-Free
+                                     </div>
+                                     
+                                     <div style="float: left;">
+                                        <input id="shellfish" type="checkbox" name="ingredients[]" value="Mushrooms"/> Shellfish-Free
+                                     </div>
+                                     
+                                     <div style="width: 7em; float: left;">
+                                        <input id="shellfish" type="checkbox" name="ingredients[]" value="Mushrooms"/>   Nuts-Free
+                                     </div>
+                                     <span class="error" id="allergyt_error"></span>
+                                 </div>
+                               </div>
+                               
+                               <div class="form-group">
+                                   <input type="text" name= "uname" id= "username" class="form-control input-lg" placeholder="firstname@cheapomail.com"/>
+                                   <span  class="error" id="uname_error"></span>
+                               </div>
+                               
+                               <div class="form-group">
+                                   <input type="text" name= "mobile" id= "mobile_num" class="form-control input-lg" placeholder="Mobile number"/>
+                                   <span class="error" id="mobile_error"></span>
+                               </div>
+                  
+                               <div class="form-group">
+                                   <input type="password" name= "pass" id= "password" class="form-control input-lg" placeholder="Password"/>
+                                   <span class="error" id="pass_error"></span>
+                               </div>
+                  
+                              <div class="form-group">
+                                   <input type="password" name= "confirm_password" id= "Confirm_password" class="form-control input-lg" placeholder="Confirm password"/>
+                                   <span class="error" id="cpass_error"></span>
+                               </div>
+                               
+                               <div class="form-group">
+                                   <input type="submit" class="btn btn-block btn-lg btn-primary" id = "register" value="register"/>
+                               </div>
+                               
+                               <div class="form-group">
+                                  <!-- error reporting goes here -->
+                                  <div class="message" id="log-msg"></div>
+          		            </div>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+              <p class="address mb-5">
+                <em>
+                  <strong>University of the West Indies</strong>
+                  <br>
+                  Mona, Kingston
+                </em>
+              </p>
+              <p class="mb-0">
+                <small>
+                  <em>Email us anything</em>
+                </small>
+                <br>
+                ultimate_mealPlanner@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Your Website 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+  <!-- Script to highlight the active date in the hours list -->
+  <script>
+    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+  </script>
+
+</html>

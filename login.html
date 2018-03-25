@@ -38,7 +38,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
+            <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="index.html">Home
                 <span class="sr-only">(current)</span>
               </a>
@@ -46,7 +46,7 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
             </li>
-            <li class="nav-item px-lg-4">
+            <li class="nav-item active px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="login.html">Login</a>
             </li>
             <li class="nav-item px-lg-4">
@@ -57,41 +57,60 @@
       </div>
     </nav>
 
-    <section class="page-section clearfix">
-      <div class="container">
-        <div class="intro">
-          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/home-display.jpg" alt="">
-          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Delighted meals</span>
-              <span class="section-heading-lower">Worth Planning</span>
-            </h2>
-            <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
-            </p>
-            <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="register.html">Register with us today!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="page-section cta">
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
             <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Our Promise</span>
-                <span class="section-heading-lower">To You</span>
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-lower">sign in</span>
               </h2>
-              <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+              <form name ="reg_form" id= "reg__form" method="post">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                           <div class="modal-body">
+                               <div class="form-group">
+                                   <input type="text" name= "uname" id= "username" class="form-control input-lg" placeholder="firstname@cheapomail.com"/>
+                                   <span  class="error" id="uname_error"></span>
+                               </div>
+                  
+                               <div class="form-group">
+                                   <input type="password" name= "pass" id= "password" class="form-control input-lg" placeholder="Password"/>
+                                   <span class="error" id="pass_error"></span>
+                               </div>
+                  
+                               <div class="form-group">
+                                   <input type="submit" class="btn btn-block btn-lg btn-primary" id = "sign-in" value="sign in"/>
+                               </div>
+                               
+                               <div class="form-group">
+                                  <!-- error reporting goes here -->
+                                  <div class="message" id="log-msg"></div>
+          		            </div>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+              <p class="address mb-5">
+                <em>
+                  <strong>University of the West Indies</strong>
+                  <br>
+                  Mona, Kingston
+                </em>
+              </p>
+              <p class="mb-0">
+                <small>
+                  <em>Email us anything</em>
+                </small>
+                <br>
+                ultimate_mealPlanner@gmail.com
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    
     <footer class="footer text-faded text-center py-5">
       <div class="container">
         <p class="m-0 small">Copyright &copy; Your Website 2018</p>
@@ -103,5 +122,10 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+
+  <!-- Script to highlight the active date in the hours list -->
+  <script>
+    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+  </script>
 
 </html>
